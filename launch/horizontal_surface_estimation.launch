@@ -1,0 +1,8 @@
+<launch>
+  <arg name="points" default="/hsrb/head_rgbd_sensor/depth_registered/rectified_points"/>
+
+  <node pkg="horizontal_surface_estimation" type="horizontal_surface_estimation_node"
+	name="horizontal_surface_estimation" output="screen">
+    <remap from="points" to="$(arg points)"/>
+  </node>
+</launch>
